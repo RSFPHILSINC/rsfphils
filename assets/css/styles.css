@@ -344,7 +344,9 @@ input {
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  min-width: 200px; /* Adjust the width */
+  min-width: 220px; /* Adjust width */
+  z-index: 1000; /* Ensures it's above other elements */
+  white-space: nowrap; /* Prevents text from wrapping */
 }
 
 .show-dropdown {
@@ -357,7 +359,7 @@ input {
 
 .dropdown-link {
   display: block;
-  padding: 0.5rem;
+  padding: 0.75rem 1rem; /* More padding for better spacing */
   color: var(--text-color-light);
   text-transform: none;
   font-weight: var(--font-semi-bold);
@@ -365,6 +367,7 @@ input {
 
 .dropdown-link:hover {
   color: var(--title-color);
+  background-color: rgba(255, 255, 255, 0.1); /* Add a slight hover effect */
 }
 
 /* Mobile view for Dropdown Menu */
