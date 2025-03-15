@@ -237,6 +237,9 @@ input {
 
 .nav__menu {
   position: relative;
+  display: flex;
+  justify-content: center; /* Center-align ang buong menu */
+  width: 100%; /* Gawing full width para pantay */
 }
 
 @media screen and (max-width: 767px) {
@@ -265,8 +268,8 @@ input {
 
 .nav__list {
   display: flex;
-  flex-direction: column;
-  row-gap: 2.5rem;
+  justify-content: center; /* Center-align items */
+  gap: 2rem; /* Adjust spacing */
 }
 
 .nav__link {
@@ -329,13 +332,14 @@ input {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: var(--body-color);
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  min-width: 180px; /* Laparan ng konti */
-  text-align: left; /* Ayusin ang alignment ng text */
+  min-width: 180px;
+  text-align: center;
 }
 
 .dropdown:hover .dropdown-menu {
