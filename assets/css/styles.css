@@ -471,10 +471,6 @@ input {
   transform: var(--img-scale);
 }
 
-.highlight {
-  color: violet;
-}
-
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
