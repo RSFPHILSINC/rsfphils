@@ -51,6 +51,23 @@ let swiper = new Swiper(".discover__container", {
     },
 })
 
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    dropdown.addEventListener("click", function (e) {
+        e.preventDefault(); // Pigilan ang default behavior
+        dropdown.classList.toggle("active"); // Toggle 'active' class
+    });
+
+    // Optional: Isara ang dropdown kapag nag-click sa ibang lugar
+    document.addEventListener("click", function (e) {
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove("active");
+        }
+    });
+});
+
 /*==================== VIDEO ====================*/
 const videoFile = document.getElementById('video-file'),
       videoButton = document.getElementById('video-button'),
