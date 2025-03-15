@@ -55,15 +55,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const dropdown = document.querySelector(".dropdown");
     const dropdownMenu = document.querySelector(".dropdown-menu");
     const dropdownToggle = dropdown.querySelector(".nav__link"); // "Who we are?" link
+    const dropdownLinks = dropdownMenu.querySelectorAll(".dropdown-link"); // Links sa dropdown
 
     dropdownToggle.addEventListener("click", function (e) {
-        // Check kung ang href ay #about
-        if (this.getAttribute("href") === "#about") {
-            e.stopPropagation(); // Pigilan ang pagsara agad
-            dropdown.classList.toggle("active"); // Toggle para magbukas/sara
-        } else {
-            e.preventDefault(); // Pigilan lang ang default kung walang section
-        }
+        e.preventDefault(); // Pigilan ang default action ng link
+        e.stopPropagation(); // Pigilan ang pagsara agad
+        dropdown.classList.toggle("active"); // Toggle para magbukas/sara
     });
 
     // Huwag hayaang mag-close kapag nasa loob ng dropdown
@@ -76,6 +73,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!dropdown.contains(e.target)) {
             dropdown.classList.remove("active");
         }
+    });
+
+    // Hayaan ang dropdown links na gumana nang tama
+    dropdownLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            dropdown.classList.remove("active"); // Isara ang dropdown kapag may napiling link
+        });
     });
 });
 
