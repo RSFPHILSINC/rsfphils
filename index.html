@@ -257,49 +257,45 @@
 
       <div class="place__container container grid">
         <!--==================== CONTACT COLUMN 1 ====================-->
-        <div class="place__card">
-          <img src="assets/img/contact1.jpg" alt="" class="place__img" />
-
-          <div class="place__content">
-            <span class="place__rating">
-              <i class="ri-map-pin-line place__rating-icon"></i>
-              <span class="place__rating-number">Our Location</span>
-            </span>
-
-            <div class="place__data">
-              <h3 class="place__title">1234 Street Name</h3>
-              <span class="place__subtitle">City, Country</span>
+        <div>
+          <div class="place__card">
+            <img src="assets/img/contact1.jpg" alt="" class="place__img" />
+            <div class="place__content">
+              <span class="place__rating">
+                <i class="ri-map-pin-line place__rating-icon"></i>
+                <span class="place__rating-number">Our Location</span>
+              </span>
+              <div class="place__data">
+                <h3 class="place__title">1234 Street Name</h3>
+                <span class="place__subtitle">City, Country</span>
+              </div>
+            </div>
+          </div>
+          <div class="place__card">
+            <img src="assets/img/contact2.jpg" alt="" class="place__img" />
+            <div class="place__content">
+              <span class="place__rating">
+                <i class="ri-phone-line place__rating-icon"></i>
+                <span class="place__rating-number">Get in Touch</span>
+              </span>
+              <div class="place__data">
+                <h3 class="place__title">+123 456 7890</h3>
+                <span class="place__subtitle">email@example.com</span>
+              </div>
             </div>
           </div>
         </div>
 
         <!--==================== CONTACT COLUMN 2 ====================-->
-        <div class="place__card">
-          <img src="assets/img/contact2.jpg" alt="" class="place__img" />
-
-          <div class="place__content">
-            <span class="place__rating">
-              <i class="ri-phone-line place__rating-icon"></i>
-              <span class="place__rating-number">Get in Touch</span>
-            </span>
-
-            <div class="place__data">
-              <h3 class="place__title">+123 456 7890</h3>
-              <span class="place__subtitle">email@example.com</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--==================== CONTACT FORM ====================-->
-      <div class="place__container container">
-        <form class="place__card contact-form">
+        <div class="place__card contact-form">
           <h3 class="place__title">Send Us a Message</h3>
-          <input type="text" class="contact-input" placeholder="Your Name" required>
-          <input type="email" class="contact-input" placeholder="Your Email" required>
-          <textarea class="contact-input" placeholder="Your Message" required></textarea>
-          <button type="submit" class="button button--flex place__button">Send Message</button>
-        </form>
+          <form>
+            <input type="text" class="contact-input" placeholder="Your Name" required>
+            <input type="email" class="contact-input" placeholder="Your Email" required>
+            <textarea class="contact-input" placeholder="Your Message" required></textarea>
+            <button type="submit" class="button button--flex place__button">Send Message</button>
+          </form>
+        </div>
       </div>
     </section>
 

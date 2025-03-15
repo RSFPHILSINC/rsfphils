@@ -671,6 +671,7 @@ input {
 
 .place__container {
   grid-template-columns: repeat(2, max-content);
+  gap: 2rem;
   justify-content: center;
 }
 
