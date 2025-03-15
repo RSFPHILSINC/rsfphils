@@ -728,7 +728,9 @@ input {
 .contact__map {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  max-width: 500px; /* Increase max-width */
+  height: 300px; /* Increase height */
+  margin-top: 10px; /* Add spacing */
 }
 
 .contact__iframe {
@@ -739,6 +741,7 @@ input {
   height: 100%;
   border: 0;
 }
+
 
 @media (max-width: 768px) {
   .contact__container {
