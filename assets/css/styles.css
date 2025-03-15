@@ -366,11 +366,15 @@ input {
 
   .dropdown-menu {
     position: static;
-    display: block;
+    display: none;
     padding: 1rem;
     border-radius: 0;
     box-shadow: none;
   }
+
+  .dropdown .show-dropdown {
+    display: block;
+}
 }
 
 /*=============== HOME ===============*/
