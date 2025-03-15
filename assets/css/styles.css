@@ -777,22 +777,20 @@ input {
 
 /*=============== SPONSORS ===============*/
 .sponsor__container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* Dalawang column, eksaktong sukat */
+  justify-content: center; /* Center alignment */
   align-items: center;
-  gap: 1.5rem; /* Mas maliit na pagitan */
+  column-gap: 1.5rem; /* Mas maliit na agwat */
 }
 
-.sponsor__content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.sponsor__content:hover .sponsor__img {
+  filter: invert(0.5);
 }
 
 .sponsor__img {
-  width: 120px; /* Parehong laki */
-  height: auto; /* Para di ma-distort */
-  object-fit: contain;
+  width: 110px; /* Pantay na laki */
+  height: auto; /* Para hindi ma-stretch */
   filter: invert(0.7);
   transition: var(--img-transition);
 }
