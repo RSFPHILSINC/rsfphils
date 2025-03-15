@@ -336,8 +336,10 @@ input {
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  min-width: 180px;
-  text-align: left;
+}
+
+.show-dropdown {
+  display: block !important;
 }
 
 .dropdown:hover .dropdown-menu {

@@ -29,7 +29,16 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener("click", function (e) {
+            e.preventDefault();
+            let dropdownMenu = this.nextElementSibling;
+            dropdownMenu.classList.toggle("show-dropdown");
+        });
+    });
+});
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader(){
     const header = document.getElementById('header')
