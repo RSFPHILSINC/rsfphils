@@ -204,6 +204,23 @@ input {
   align-items: center;
 }
 
+/* Logo Image with text */
+.nav__logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo .logo-img {
+  max-height: 40px;  /* Adjust this size based on your logo's aspect ratio */
+  width: auto;
+  margin-right: 10px;  /* Space between logo image and text */
+}
+
+.nav__logo span {
+  font-weight: var(--font-semi-bold);
+  color: var(--white-color); /* Make sure the text color matches your design */
+}
+
 .nav__logo, .nav__toggle {
   color: var(--white-color);
 }
@@ -260,7 +277,7 @@ input {
   cursor: pointer;
 }
 
-/* show menu */
+/* Show menu */
 .show-menu {
   right: 0;
 }
@@ -291,6 +308,54 @@ input {
   bottom: -.75rem;
   left: 0;
 }
+
+/*=============== Dropdown ===============*/
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--body-color);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 0.5rem;
+  color: var(--text-color-light);
+  text-transform: none;
+  font-weight: var(--font-semi-bold);
+}
+
+.dropdown-link:hover {
+  color: var(--title-color);
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 767px) {
+  .nav__list {
+    flex-direction: column;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: block;
+    padding: 1rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
 
 /*=============== HOME ===============*/
 .home__img {

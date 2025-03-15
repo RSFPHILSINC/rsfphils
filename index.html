@@ -20,15 +20,24 @@
     <body>
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav__logo">RSF - Philippines</a>
-
+                <!-- Logo as an image with the name next to it -->
+                <a href="#" class="nav__logo">
+                    <img src="path_to_your_logo_image.png" alt="RSF - Philippines" class="logo-img">
+                    <span>RSF - Philippines</span>
+                </a>
+        
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a href="#home" class="nav__link active-link">Home</a>
                         </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">Who we are?</a>
+                        <!-- Dropdown for Who We Are -->
+                        <li class="nav__item dropdown">
+                            <a href="#" class="nav__link">Who we are?</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#about-us" class="dropdown-link">About Us</a></li>
+                                <li><a href="#team" class="dropdown-link">Our Team</a></li>
+                            </ul>
                         </li>
                         <li class="nav__item">
                             <a href="#discover" class="nav__link">Services</a>
@@ -37,21 +46,21 @@
                             <a href="#place" class="nav__link">Contact Us</a>
                         </li>
                     </ul>
-
+        
                     <div class="nav__dark">
-                        <!-- Theme change button -->
                         <span class="change-theme-name">Dark mode</span>
                         <i class="ri-moon-line change-theme" id="theme-button"></i>
                     </div>
-
+        
                     <i class="ri-close-line nav__close" id="nav-close"></i>
                 </div>
-
+        
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-function-line"></i>
                 </div>
             </nav>
         </header>
+        
 
         <main class="main">
             <!--==================== HOME ====================-->
