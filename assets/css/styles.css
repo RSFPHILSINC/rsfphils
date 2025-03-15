@@ -780,7 +780,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem; /* Mas maliit na pagitan */
 }
 
 .sponsor__content {
@@ -790,9 +790,9 @@ input {
 }
 
 .sponsor__img {
-  width: 120px; /* Gawing pantay ang sukat */
-  height: 120px; /* Gawing pantay ang sukat */
-  object-fit: contain; /* Para hindi ma-stretch */
+  width: 120px; /* Parehong laki */
+  height: auto; /* Para di ma-distort */
+  object-fit: contain;
   filter: invert(0.7);
   transition: var(--img-transition);
 }
