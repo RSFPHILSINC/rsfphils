@@ -54,14 +54,24 @@ let swiper = new Swiper(".discover__container", {
 document.addEventListener("DOMContentLoaded", function () {
     const dropdown = document.querySelector(".dropdown");
     const dropdownMenu = document.querySelector(".dropdown-menu");
+    const dropdownToggle = dropdown.querySelector(".nav__link"); // "Who we are?" link
 
-    dropdown.addEventListener("click", function (e) {
-        e.preventDefault(); // Pigilan ang default behavior ng anchor tag
-        e.stopPropagation(); // Pigilan ang pag-trigger ng event sa buong document
-        dropdown.classList.toggle("active"); // Toggle class para mag-open/close
+    dropdownToggle.addEventListener("click", function (e) {
+        // Check kung ang href ay #about
+        if (this.getAttribute("href") === "#about") {
+            e.stopPropagation(); // Pigilan ang pagsara agad
+            dropdown.classList.toggle("active"); // Toggle para magbukas/sara
+        } else {
+            e.preventDefault(); // Pigilan lang ang default kung walang section
+        }
     });
 
-    // Isara ang dropdown kapag nag-click sa labas, pero hindi kapag nasa dropdown
+    // Huwag hayaang mag-close kapag nasa loob ng dropdown
+    dropdownMenu.addEventListener("click", function (e) {
+        e.stopPropagation();
+    });
+
+    // Isara ang dropdown kapag nag-click sa labas
     document.addEventListener("click", function (e) {
         if (!dropdown.contains(e.target)) {
             dropdown.classList.remove("active");
