@@ -254,48 +254,52 @@
     <!--==================== CONTACT US ====================-->
     <section class="contact section" id="contact">
       <h2 class="section__title">Get in Touch</h2>
-    
-      <div class="contact__container">
-        <!-- Contact Info Card -->
-        <div class="contact__card">
-          <div class="contact__info">
-            <h3>Contact Information</h3>
-            <p>Have questions? Reach out to us anytime!</p>
-            <div class="contact__details">
-              <div class="contact__item">
-                <i class="ri-map-pin-line"></i>
-                <span>WV4W+F56, General Alejo G. Santos Hwy, Plaridel, Bulacan</span>
-              </div>
-              <div class="contact__item">
-                <i class="ri-phone-line"></i>
-                <span>+63 998 536 7209 <br> +63 44 802</span>
-              </div>
-              <div class="contact__item">
-                <i class="ri-mail-line"></i>
-                <span>richwellscholarshipfoundation@gmail.com <br> rsfphilsinc23@gmail.com</span>
-              </div>
+
+      <div class="contact__container container grid">
+        <!-- Contact Details Column -->
+        <div class="contact__info">
+          <h3 class="contact__title">Contact Information</h3>
+          <p class="contact__text">Have questions? Reach out to us anytime!</p>
+
+          <div class="contact__details">
+            <div class="contact__item">
+              <i class="ri-map-pin-line"></i>
+              <span>WV4W+F56, General Alejo G. Santos Hwy, Plaridel, Bulacan</span>
             </div>
-            <div class="contact__map">
-              <iframe class="contact__iframe"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.5544399172886!2d120.892803474849!3d14.906172569522855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339654d2d5e4508b%3A0xf2615c0a320c967b!2sRichwell%20Colleges%2C%20Inc.!5e0!3m2!1sen!2sph!4v1742050910852!5m2!1sen!2sph"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
+            <div class="contact__item">
+              <i class="ri-phone-line"></i>
+              <span>+63 998 536 7209 <br> +63 44 802</span>
+            </div>
+            <div class="contact__item">
+              <i class="ri-mail-line"></i>
+              <span>richwellscholarshipfoundation@gmail.com <br> rsfphilsinc23@gmail.com</span>
             </div>
           </div>
-        
-          <form class="contact__form">
-            <h3>Send Us a Message</h3>
-            <div class="contact__input-group">
-              <input type="text" placeholder="Your Name" class="contact__input" required />
-              <input type="email" placeholder="Your Email" class="contact__input" required />
-            </div>
-            <textarea placeholder="Your Message" class="contact__input textarea" required></textarea>
-            <button type="submit" class="button">Send Message</button>
-          </form>
+
+          <!-- Embedded Google Map -->
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.5544399172886!2d120.892803474849!3d14.906172569522855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339654d2d5e4508b%3A0xf2615c0a320c967b!2sRichwell%20Colleges%2C%20Inc.!5e0!3m2!1sen!2sph!4v1742050910852!5m2!1sen!2sph"
+              class="contact__iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
         </div>
+
+        <!-- Contact Form Column -->
+        <form action="#" class="contact__form">
+          <h3 class="contact__title">Send Us a Message</h3>
+
+          <div class="contact__input-group">
+            <input type="text" placeholder="Your Name" class="contact__input" required />
+            <input type="email" placeholder="Your Email" class="contact__input" required />
+          </div>
+          <textarea placeholder="Your Message" class="contact__input textarea" required></textarea>
+
+          <button type="submit" class="button">Send Message</button>
+        </form>
       </div>
     </section>
-    
 
     <!--==================== PLACES ====================-->
     <!-- <section class="place section" id="place">
