@@ -833,7 +833,7 @@ input {
 } */
 
 /*=============== SUBSCRIBE ===============*/
-.subscribe__bg {
+/* .subscribe__bg {
   background-color: var(--first-color-second);
   padding: 2.5rem 0;
 }
@@ -864,7 +864,7 @@ input {
 
 .subscribe__input::placeholder {
   color: var(--text-color);
-}
+} */
 
 /*=============== SPONSORS ===============*/
 .sponsor__container {
