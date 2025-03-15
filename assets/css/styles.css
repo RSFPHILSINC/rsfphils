@@ -777,20 +777,29 @@ input {
 
 /*=============== SPONSORS ===============*/
 .sponsor__container {
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Adjusted column size */
   justify-items: center;
-  row-gap: 3.5rem;
+  gap: 2rem; /* Reduced row and column gap */
+  padding: 1rem 0; /* Adjusted padding */
+}
+
+.sponsor__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor__img {
+  width: 70px; /* Reduced image width */
+  filter: invert(0.7);
+  transition: var(--img-transition);
 }
 
 .sponsor__content:hover .sponsor__img {
   filter: invert(0.5);
 }
 
-.sponsor__img {
-  width: 90px;
-  filter: invert(0.7);
-  transition: var(--img-transition);
-}
 
 /*=============== FOOTER ===============*/
 .footer__container {
