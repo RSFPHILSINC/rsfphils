@@ -268,7 +268,7 @@ input {
 .nav__list {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  row-gap: 2.5rem;
 }
 
 .nav__link {
@@ -954,7 +954,7 @@ input {
   }
   .nav__list {
     flex-direction: row;
-    column-gap: 4rem;
+    column-gap: 3rem;
   }
   .nav__toggle, .nav__close {
     display: none;
