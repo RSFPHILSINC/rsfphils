@@ -237,9 +237,6 @@ input {
 
 .nav__menu {
   position: relative;
-  display: flex;
-  justify-content: center; /* Center-align ang buong menu */
-  width: 100%; /* Gawing full width para pantay */
 }
 
 @media screen and (max-width: 767px) {
@@ -268,8 +265,8 @@ input {
 
 .nav__list {
   display: flex;
-  justify-content: center; /* Center-align items */
-  gap: 2rem; /* Adjust spacing */
+  flex-direction: column;
+  row-gap: 2.5rem;
 }
 
 .nav__link {
@@ -332,8 +329,7 @@ input {
   display: none;
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   background-color: var(--body-color);
   padding: 1rem;
   border-radius: 5px;
