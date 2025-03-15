@@ -251,53 +251,158 @@
       </div>
     </section>
 
+    <!--==================== CONTACT US ====================-->
+    <section class="contact section" id="contact">
+      <h2 class="section__title">Get in Touch</h2>
+    
+      <div class="contact__container container grid">
+        <!-- Contact Details Column -->
+        <div class="contact__info">
+          <h3 class="contact__title">Contact Information</h3>
+          <p class="contact__text">Have questions? Reach out to us anytime!</p>
+    
+          <div class="contact__details">
+            <div class="contact__item">
+              <i class="ri-map-pin-line"></i>
+              <span>123 Street, City, Country</span>
+            </div>
+            <div class="contact__item">
+              <i class="ri-phone-line"></i>
+              <span>+1 234 567 890</span>
+            </div>
+            <div class="contact__item">
+              <i class="ri-mail-line"></i>
+              <span>contact@yourwebsite.com</span>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Contact Form Column -->
+        <form action="#" class="contact__form">
+          <h3 class="contact__title">Send Us a Message</h3>
+    
+          <div class="contact__input-group">
+            <input type="text" placeholder="Your Name" class="contact__input" required />
+            <input type="email" placeholder="Your Email" class="contact__input" required />
+          </div>
+          <textarea placeholder="Your Message" class="contact__input textarea" required></textarea>
+    
+          <button type="submit" class="button">Send Message</button>
+        </form>
+      </div>
+    </section>    
+
     <!--==================== PLACES ====================-->
-    <section class="place section" id="place">
-      <h2 class="section__title">Contact Us</h2>
+    <!-- <section class="place section" id="place">
+      <h2 class="section__title">Choose Your Place</h2>
 
       <div class="place__container container grid">
-        <!--==================== CONTACT COLUMN 1 ====================-->
-        <div>
-          <div class="place__card">
-            <img src="assets/img/contact1.jpg" alt="" class="place__img" />
-            <div class="place__content">
-              <span class="place__rating">
-                <i class="ri-map-pin-line place__rating-icon"></i>
-                <span class="place__rating-number">Our Location</span>
-              </span>
-              <div class="place__data">
-                <h3 class="place__title">1234 Street Name</h3>
-                <span class="place__subtitle">City, Country</span>
-              </div>
+        <div class="place__card">
+          <img src="assets/img/place1.jpg" alt="" class="place__img" />
+
+          <div class="place__content">
+            <span class="place__rating">
+              <i class="ri-star-line place__rating-icon"></i>
+              <span class="place__rating-number">4,8</span>
+            </span>
+
+            <div class="place__data">
+              <h3 class="place__title">Bali</h3>
+              <span class="place__subtitle">Indonesia</span>
+              <span class="place__price">$2499</span>
             </div>
           </div>
-          <div class="place__card">
-            <img src="assets/img/contact2.jpg" alt="" class="place__img" />
-            <div class="place__content">
-              <span class="place__rating">
-                <i class="ri-phone-line place__rating-icon"></i>
-                <span class="place__rating-number">Get in Touch</span>
-              </span>
-              <div class="place__data">
-                <h3 class="place__title">+123 456 7890</h3>
-                <span class="place__subtitle">email@example.com</span>
-              </div>
-            </div>
-          </div>
+
+          <button class="button button--flex place__button">
+            <i class="ri-arrow-right-line"></i>
+          </button>
         </div>
 
-        <!--==================== CONTACT COLUMN 2 ====================-->
-        <div class="place__card contact-form">
-          <h3 class="place__title">Send Us a Message</h3>
-          <form>
-            <input type="text" class="contact-input" placeholder="Your Name" required>
-            <input type="email" class="contact-input" placeholder="Your Email" required>
-            <textarea class="contact-input" placeholder="Your Message" required></textarea>
-            <button type="submit" class="button button--flex place__button">Send Message</button>
-          </form>
+        <div class="place__card">
+          <img src="assets/img/place2.jpg" alt="" class="place__img" />
+
+          <div class="place__content">
+            <span class="place__rating">
+              <i class="ri-star-line place__rating-icon"></i>
+              <span class="place__rating-number">5,0</span>
+            </span>
+
+            <div class="place__data">
+              <h3 class="place__title">Bora Bora</h3>
+              <span class="place__subtitle">Polinesia</span>
+              <span class="place__price">$1599</span>
+            </div>
+          </div>
+
+          <button class="button button--flex place__button">
+            <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+
+        <div class="place__card">
+          <img src="assets/img/place3.jpg" alt="" class="place__img" />
+
+          <div class="place__content">
+            <span class="place__rating">
+              <i class="ri-star-line place__rating-icon"></i>
+              <span class="place__rating-number">4,9</span>
+            </span>
+
+            <div class="place__data">
+              <h3 class="place__title">Hawaii</h3>
+              <span class="place__subtitle">EE.UU</span>
+              <span class="place__price">$3499</span>
+            </div>
+          </div>
+
+          <button class="button button--flex place__button">
+            <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+
+        <div class="place__card">
+          <img src="assets/img/place4.jpg" alt="" class="place__img" />
+
+          <div class="place__content">
+            <span class="place__rating">
+              <i class="ri-star-line place__rating-icon"></i>
+              <span class="place__rating-number">4,8</span>
+            </span>
+
+            <div class="place__data">
+              <h3 class="place__title">Whitehaven</h3>
+              <span class="place__subtitle">Australia</span>
+              <span class="place__price">$2499</span>
+            </div>
+          </div>
+
+          <button class="button button--flex place__button">
+            <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+
+        <div class="place__card">
+          <img src="assets/img/place5.jpg" alt="" class="place__img" />
+
+          <div class="place__content">
+            <span class="place__rating">
+              <i class="ri-star-line place__rating-icon"></i>
+              <span class="place__rating-number">4,8</span>
+            </span>
+
+            <div class="place__data">
+              <h3 class="place__title">Hvar</h3>
+              <span class="place__subtitle">Croacia</span>
+              <span class="place__price">$1999</span>
+            </div>
+          </div>
+
+          <button class="button button--flex place__button">
+            <i class="ri-arrow-right-line"></i>
+          </button>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!--==================== SUBSCRIBE ====================-->
     <!-- <section class="subscribe section">
