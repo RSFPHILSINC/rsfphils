@@ -56,11 +56,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const dropdownMenu = document.querySelector(".dropdown-menu");
 
     dropdown.addEventListener("click", function (e) {
-        e.preventDefault(); // Pigilan ang default behavior
-        dropdown.classList.toggle("active"); // Toggle 'active' class
+        e.preventDefault(); // Pigilan ang default behavior ng anchor tag
+        e.stopPropagation(); // Pigilan ang pag-trigger ng event sa buong document
+        dropdown.classList.toggle("active"); // Toggle class para mag-open/close
     });
 
-    // Optional: Isara ang dropdown kapag nag-click sa ibang lugar
+    // Isara ang dropdown kapag nag-click sa labas, pero hindi kapag nasa dropdown
     document.addEventListener("click", function (e) {
         if (!dropdown.contains(e.target)) {
             dropdown.classList.remove("active");
