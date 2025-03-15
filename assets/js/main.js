@@ -51,40 +51,6 @@ let swiper = new Swiper(".discover__container", {
     },
 })
 
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdown = document.querySelector(".dropdown");
-    const dropdownMenu = dropdown.querySelector(".dropdown-menu");
-    const dropdownToggle = dropdown.querySelector(".nav__link"); // "Who we are?" link
-    const dropdownLinks = dropdownMenu.querySelectorAll(".dropdown-link"); // Links sa dropdown
-
-    dropdownToggle.addEventListener("click", function (e) {
-        e.preventDefault(); // Pigilan ang default action ng link
-        e.stopPropagation(); // Pigilan ang pagsara agad
-
-        // Toggle dropdown visibility
-        dropdownMenu.classList.toggle("show-dropdown");
-    });
-
-    // Huwag hayaang mag-close kapag nasa loob ng dropdown
-    dropdownMenu.addEventListener("click", function (e) {
-        e.stopPropagation();
-    });
-
-    // Isara ang dropdown kapag nag-click sa labas
-    document.addEventListener("click", function (e) {
-        if (!dropdown.contains(e.target)) {
-            dropdownMenu.classList.remove("show-dropdown");
-        }
-    });
-
-    // Hayaan ang dropdown links na gumana nang tama
-    dropdownLinks.forEach(link => {
-        link.addEventListener("click", function () {
-            dropdownMenu.classList.remove("show-dropdown"); // Isara ang dropdown kapag may napiling link
-        });
-    });
-});
-
 /*==================== VIDEO ====================*/
 const videoFile = document.getElementById('video-file'),
       videoButton = document.getElementById('video-button'),

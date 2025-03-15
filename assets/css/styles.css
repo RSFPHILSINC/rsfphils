@@ -361,14 +361,11 @@ input {
   }
 
   .dropdown-menu {
-    display: none !important; /* Siguradong nakatago */
-    position: static; /* Para hindi sumama sa absolute positioning */
+    position: static;
+    display: block;
+    padding: 1rem;
+    border-radius: 0;
     box-shadow: none;
-    padding: 0;
-  }
-
-  .dropdown.active .dropdown-menu {
-    display: block !important; /* Lalabas lang kapag may class na "active" */
   }
 }
 
