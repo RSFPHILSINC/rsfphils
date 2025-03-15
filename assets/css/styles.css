@@ -232,6 +232,7 @@ input {
 .nav__toggle {
   font-size: 1.2rem;
   cursor: pointer;
+  display: none; /* Initially hidden, visible only on small screens */
 }
 
 .nav__menu {
@@ -239,6 +240,7 @@ input {
 }
 
 @media screen and (max-width: 767px) {
+  /* Hide the menu initially on small screens */
   .nav__menu {
     position: fixed;
     background-color: var(--body-color);
@@ -249,6 +251,15 @@ input {
     box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
     padding: 3rem;
     transition: .4s;
+  }
+
+  .nav__toggle {
+    display: block; /* Show the toggle button */
+  }
+
+  /* When the menu is visible */
+  .show-menu {
+    right: 0;
   }
 }
 
@@ -341,7 +352,7 @@ input {
   color: var(--title-color);
 }
 
-/* Media Query for Mobile */
+/* Mobile view for Dropdown Menu */
 @media screen and (max-width: 767px) {
   .nav__list {
     flex-direction: column;
@@ -355,7 +366,6 @@ input {
     box-shadow: none;
   }
 }
-
 
 /*=============== HOME ===============*/
 .home__img {
