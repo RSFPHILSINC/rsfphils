@@ -374,12 +374,11 @@ input {
   }
 
   .dropdown-menu {
-    position: static;
     display: none;
+    position: static;
     padding: 1.5rem;
-    border-radius: 0;
-    box-shadow: none;
-  }
+    min-width: 100%;
+}
 
   .dropdown .show-dropdown {
     display: block;
