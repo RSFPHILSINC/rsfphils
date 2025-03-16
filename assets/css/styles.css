@@ -178,6 +178,7 @@ input {
 
 .section__title {
   font-size: var(--h2-font-size);
+  font-weight: bolder;
   color: var(--title-color);
   text-align: center;
   text-transform: capitalize;
@@ -511,6 +512,10 @@ input {
 
 .about__description {
   margin-bottom: var(--mb-2);
+}
+
+.about__description .mission {
+  font-size: smaller;
 }
 
 .about__img {
