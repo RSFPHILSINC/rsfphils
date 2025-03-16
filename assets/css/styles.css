@@ -883,7 +883,7 @@ input {
   width: 110px; /* Pantay na laki */
   height: auto; /* Para hindi ma-stretch */
   filter: invert(0.7);
-  transition: var(--img-transition);
+  /* transition: var(--img-transition); */
 }
 
 /*=============== FOOTER ===============*/
