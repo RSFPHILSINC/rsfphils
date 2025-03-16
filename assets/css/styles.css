@@ -550,7 +550,7 @@ input {
 /*=============== DISCOVER ===============*/
 .discover__card {
   position: relative;
-  width: 200px;
+  width: 450px !important;
   overflow: var(--img-hidden);
 }
 
