@@ -565,10 +565,10 @@ input {
 .board__card {
   display: flex;
   align-items: center;
-  background: #fff;
+  background-color: var(--body-color);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px var(--first-color-second);
   gap: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -596,11 +596,12 @@ input {
 .board__name {
   font-size: 18px;
   font-weight: bold;
+  color: var(--title-color);
   transition: color 0.3s ease;
 }
 
 .board__card:hover .board__name {
-  color: #0056b3;
+  color: var(--first-color);
 }
 
 .board__info {
@@ -636,6 +637,7 @@ input {
       margin-bottom: 10px;
   }
 }
+
 
 /*=============== DISCOVER ===============*/
 .discover__card {
