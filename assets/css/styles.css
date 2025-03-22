@@ -610,12 +610,12 @@ input {
 
 .board__position {
   font-size: 16px;
-  color: #555;
+  color: var(--text-color);
 }
 
 .board__education {
   font-size: 14px;
-  color: #777;
+  color: var(--text-color);
 }
 
 /* Responsive Design */
