@@ -721,14 +721,14 @@ input {
   box-shadow: 0 5px 10px var(--first-color-second);
   gap: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 48%; /* Same width as other cards */
-  margin: 0 auto 20px auto; /* Centering */
-  flex-direction: column; /* Stack image and text properly */
+  max-width: 48%;
+  margin: 0 auto 20px auto;
+  flex-direction: column;
   text-align: center;
 }
 
 .keyperson__single img {
-  width: 100px; /* Make sure all images are the same size */
+  width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
