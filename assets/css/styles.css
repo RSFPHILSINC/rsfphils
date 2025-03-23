@@ -412,16 +412,18 @@ input {
   color: var(--white-color);
 }
 
-.home__data-subtitle {
-  display: block;
-  font-weight: var(--font-semi-bold);
-  margin-bottom: var(--mb-0-75);
-}
-
 .home__data-title {
   font-size: var(--biggest-font-size);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.home__data-subtitle {
+  display: block;
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-0-75);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .home__social {
@@ -547,7 +549,7 @@ input {
   transform: var(--img-scale);
 }
 
-/* BOARD MEMBERS */
+/*=============== BOARD MEMBERS ===============*/
 .board__container {
   display: flex;
   justify-content: center;
@@ -638,6 +640,7 @@ input {
   }
 }
 
+/*=============== KEY PERSONS ===============*/
 .keyperson__container {
   display: flex;
   justify-content: center;
@@ -674,7 +677,7 @@ input {
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.525);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -708,6 +711,48 @@ input {
   color: var(--text-color);
 }
 
+.keyperson__single {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--body-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px var(--first-color-second);
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 48%; /* Same width as other cards */
+  margin: 0 auto 20px auto; /* Centering */
+  flex-direction: column; /* Stack image and text properly */
+  text-align: center;
+}
+
+.keyperson__single img {
+  width: 100px; /* Make sure all images are the same size */
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.525);
+}
+
+.keyperson__single h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--title-color);
+}
+
+.keyperson__single p {
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .keyperson__single {
+    max-width: 100%;
+  }
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .keyperson__container {
@@ -723,8 +768,78 @@ input {
       text-align: center;
   }
 
+  .keyperson__card {
+      flex-direction: column;
+      text-align: center;
+  }
+
   .keyperson__img {
       margin-bottom: 10px;
+  }
+}
+
+/*=============== AFFILIATIONS & PARTNERS ===============*/
+.affiliations__container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.affiliations__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--body-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px var(--first-color-second);
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: 22%;
+}
+
+.affiliations__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px var(--first-color);
+  background: #f8f9fa;
+}
+
+.affiliations__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.525);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.affiliations__card:hover .affiliations__img {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px var(--first-color-alt);
+}
+
+.affiliations__name {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--title-color);
+  transition: color 0.3s ease;
+}
+
+.affiliations__card:hover .affiliations__name {
+  color: var(--first-color);
+}
+
+@media screen and (max-width: 768px) {
+  .affiliations__container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .affiliations__card {
+      width: 100%;
   }
 }
 
