@@ -586,7 +586,7 @@ input {
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.525);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -620,7 +620,64 @@ input {
   color: var(--text-color);
 }
 
+.board__single {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--body-color);
+  padding: 15px; /* Binawasan ang padding */
+  border-radius: 10px;
+  box-shadow: 0 5px 10px var(--first-color-second);
+  gap: 10px; /* Mas maliit ang spacing */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 48%;
+  margin: 0 auto 15px auto; /* Binawasan ang bottom margin */
+  flex-direction: column;
+  text-align: center;
+}
+
+.board__single img {
+  width: 80px; /* Medyo maliit ang image */
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.board__single h3 {
+  font-size: 16px; /* Binawasan mula 18px */
+  font-weight: bold;
+  color: var(--title-color);
+}
+
+.board__single p {
+  font-size: 14px; /* Binawasan mula 16px */
+  color: var(--text-color);
+  margin: 2px 0; /* Bawas spacing */
+}
+
 /* Responsive Design */
+@media screen and (max-width: 768px) {
+  .board__single {
+    max-width: 100%;
+    padding: 12px; /* Mas maliit sa mobile */
+  }
+
+  .board__single img {
+    width: 70px; /* Mas maliit sa mobile */
+    height: 70px;
+  }
+
+  .board__single h3 {
+    font-size: 15px;
+  }
+
+  .board__single p {
+    font-size: 13px;
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   .board__container {
       flex-direction: column;
