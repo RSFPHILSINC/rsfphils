@@ -552,8 +552,43 @@ input {
 /*=============== BOARD MEMBERS ===============*/
 .board__container {
   display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Para sa Board Owners (Single) */
+.board__owners {
+  display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.board__single {
+  width: 48%;
+  display: flex;
+  align-items: center;
+  background-color: var(--body-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px var(--first-color-second);
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.board__single:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px var(--first-color);
+  background: #f8f9fa;
+}
+
+/* Para sa Board Members (Rows & Columns) */
+.board__row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -561,7 +596,6 @@ input {
   width: 48%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .board__card {
@@ -573,6 +607,7 @@ input {
   box-shadow: 0 5px 10px var(--first-color-second);
   gap: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-wrap: nowrap;
 }
 
 .board__card:hover {
@@ -582,17 +617,17 @@ input {
 }
 
 .board__img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.525);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
 }
 
-.board__card:hover .board__img {
-  transform: scale(1.1);
-  box-shadow: 0 6px 12px var(--first-color-alt);
+.board__info {
+  flex-grow: 1;
 }
 
 .board__name {
@@ -600,14 +635,6 @@ input {
   font-weight: bold;
   color: var(--title-color);
   transition: color 0.3s ease;
-}
-
-.board__card:hover .board__name {
-  color: var(--first-color);
-}
-
-.board__info {
-  flex: 1;
 }
 
 .board__position {
@@ -620,82 +647,29 @@ input {
   color: var(--text-color);
 }
 
-.board__single {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--body-color);
-  padding: 15px; /* Binawasan ang padding */
-  border-radius: 10px;
-  box-shadow: 0 5px 10px var(--first-color-second);
-  gap: 10px; /* Mas maliit ang spacing */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 48%;
-  margin: 0 auto 15px auto; /* Binawasan ang bottom margin */
-  flex-direction: column;
-  text-align: center;
-}
-
-.board__single img {
-  width: 80px; /* Medyo maliit ang image */
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
-}
-
-.board__single h3 {
-  font-size: 16px; /* Binawasan mula 18px */
-  font-weight: bold;
-  color: var(--title-color);
-}
-
-.board__single p {
-  font-size: 14px; /* Binawasan mula 16px */
-  color: var(--text-color);
-  margin: 2px 0; /* Bawas spacing */
-}
-
-/* Responsive Design */
+/* Responsive Fixes */
 @media screen and (max-width: 768px) {
-  .board__single {
-    max-width: 100%;
-    padding: 12px; /* Mas maliit sa mobile */
+  .board__owners, .board__row {
+    flex-direction: column;
+    gap: 15px;
   }
 
-  .board__single img {
-    width: 70px; /* Mas maliit sa mobile */
-    height: 70px;
+  .board__single, .board__column {
+    width: 100%;
   }
 
-  .board__single h3 {
-    font-size: 15px;
-  }
-
-  .board__single p {
-    font-size: 13px;
-  }
-}
-
-
-@media screen and (max-width: 768px) {
-  .board__container {
-      flex-direction: column;
-  }
-  
-  .board__column {
-      width: 100%;
-  }
-  
-  .board__card {
-      flex-direction: column;
-      text-align: center;
+  .board__card, .board__single {
+    flex-direction: column;
+    text-align: center;
   }
 
   .board__img {
-      margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
   }
 }
+
 
 /*=============== KEY PERSONS ===============*/
 .keyperson__container {
